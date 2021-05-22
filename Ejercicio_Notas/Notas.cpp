@@ -168,10 +168,9 @@ void QuintoEstudiante()
 int main()
 {
   int opcion;
-
+     cout << "  ****BIENVENIDO AL PROGRAMA DE NOTAS****         " << endl;
   do
   {
-    cout << "  ****BIENVENIDO AL PROGRAMA DE NOTAS****         " << endl;
     cout << "1-Ingresar la nota del primer estudiante:        " << endl;
     cout << "2-Ingresar la nota del segundo estudiante:       " << endl;
     cout << "3-Ingresar la nota del tercer estudiante:        " << endl;
