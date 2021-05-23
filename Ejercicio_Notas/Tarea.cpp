@@ -9,6 +9,7 @@ int main(){
    double resultado;
    double contador,opcion, cantidadLitros, cantidadKilometros;
    cout<<"---BIENVENIDO AL PROGRANA PARA CALCULAR Litros y Kilometrajes--- "<<endl;
+
    while (litros!=1) {
    cout<<"Por favor ingrese su nombre: "<<endl;
    cin>>Nombre;
@@ -17,6 +18,7 @@ int main(){
    cout<<"Introduzca la cantidad de kilometros: "<<endl;
    cin>>cantidadKilometros;
    cout<<"El nombre de la persona es: "<< Nombre <<endl;
+   
    if (cantidadLitros == 1){
 
    }else{

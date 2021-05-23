@@ -8,7 +8,7 @@ int main()
     int nota1, nota2, nota3, promedio;
     int calificaciones;
     int cantidad, opcion = 0;
-    while (opcion>=5)
+    while (opcion!=5)
     {
         cout << "Ingrese la cantidad de estudiante que desea calificar" << endl;
         cin >> cantidad;
@@ -20,7 +20,10 @@ int main()
         cin >> nota3;
         promedio = nota1 + nota2 + nota3;
         
-        cout << "Su promedio es:" << promedio << endl;
+        
+        if (promedio >= 70)
+        {
+            cout << "Su promedio es:" << promedio << endl;
         notaBase100PrimerParcial = nota1 * 100 / 20;
         cout << "Nota en base a 100 del primer parcial: " << notaBase100PrimerParcial << endl;
 
@@ -29,9 +32,8 @@ int main()
 
         notaBase100TercerParcial = nota3 * 100 / 45;
         cout << "Nota en base a 100 del tercer parcial:" << notaBase100TercerParcial << endl;
-        if (promedio >= 70)
-        {
-            cout << ("Aprobaste la clase!") << endl;
+        
+            cout << "Aprobaste la clase!" << endl;
         }
         else
         {
