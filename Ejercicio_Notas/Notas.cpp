@@ -211,7 +211,7 @@ int main()
 
 void salir()
 {
-  cout << "Gracias vuelva pronto";
+  cout << "GRACIAS VUELVA PRONTO";
 }
 
 
