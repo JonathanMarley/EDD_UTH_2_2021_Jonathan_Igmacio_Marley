@@ -20,7 +20,7 @@ int main(){
    cout<<"El nombre de la persona es: "<< Nombre <<endl;
    
    if (cantidadLitros == 1){
-
+        cout<<"Ejecucion de la cantidad"<<endl;
    }else{
        resultado = cantidadKilometros / cantidadLitros;
        cantidadLitros += litros;
