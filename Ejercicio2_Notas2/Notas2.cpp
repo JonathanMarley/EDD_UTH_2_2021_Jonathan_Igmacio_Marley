@@ -36,6 +36,7 @@ int main()
             cout << "Aprobaste la clase!" << endl;
         }
         else
+        cout<<"jola"<<endl;
         {
             cout << "Reprobarste!" << endl;
         }
