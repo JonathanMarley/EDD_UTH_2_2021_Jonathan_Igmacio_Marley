@@ -18,22 +18,20 @@ int main(){
    cout<<"Introduzca la cantidad de kilometros: "<<endl;
    cin>>cantidadKilometros;
    cout<<"El nombre de la persona es: "<< Nombre <<endl;
-   
-   if (cantidadLitros == 1){
-        cout<<"Ejecucion de la cantidad"<<endl;
-   }else{
+   for (int i = 0; i < cantidadKilometros; i++)
+   {
+        
        resultado = cantidadKilometros / cantidadLitros;
        cantidadLitros += litros;
        cantidadKilometros += kilometros;
    }
    
+   
    cout<<"Los Kilometraje /Litro para este tanque fueron: " << resultado <<endl;
+ 
 
    }
-   
-   
-   
-
+    contador++;
 
     return 0;
 }
