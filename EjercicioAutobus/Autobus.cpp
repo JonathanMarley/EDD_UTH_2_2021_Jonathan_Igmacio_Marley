@@ -2,39 +2,45 @@
 //1- se podra vender un boleto siempre y cuando el asiento este vacio imprimir boletos vendidos
 
 #include <iostream>
-
+#include <string.h>
 using namespace std;
 
 int main(){
-    int AutoBus[50], NumAsiento[10];
+
+    const int tamanio=5;
+    int AutoBus[tamanio], NumAsiento, contador;
+    char resp='s';
 
 
-    for (int x = 0; x < 50; x++){
 
+    for (int x = 0; x < tamanio; x++){
         AutoBus[x]=0;
+    }
+    while (resp=='s' && contador<tamanio){
+        cout<<"Digite un numero de asiento: "<<endl;
+        cin>>NumAsiento;
+        if (AutoBus[NumAsiento-1]==0){
+            AutoBus[NumAsiento-1]=1;
+            contador++;
+        }else
+        cout<<"El asiento ya fue reservado"<<endl;
+        
+        cout<<"Quiere continuar vendiendo?"<<endl;
+        cin>>resp;
+        
+        cout<<"Informes de boletos vendidos y no comprados"<<endl;
 
-        cout<<"Ingrese un numero de asiento:: "<<endl;
-        cin >> NumAsiento[10];
-         
-        for ( int c = 0; c < NumAsiento[10]; c++){
+        for (size_t y = 0; y < tamanio; y++){
+            if (AutoBus[y]==1){
+                cout<<"Asiento #"<< y+1 << "-> vendido" <<endl;
+            }else
+            cout<<"Asiento #"<< y+1 << "-> DESOCUPADO" <<endl;
             
-         //cout<<"Ingrese un numero de asiento:: "<<endl;
-         //cin >> NumAsiento;
-         
-         if (NumAsiento[10] == 0 ){
-            
-         }else {
-             cout<<"---El Asiento esta ocupado por favor ingrese otro numero de asiento--- "<<endl;
-         }
-         cout<<"\""<<AutoBus[x]<<"\" -- " << x <<endl;
-
-         }
-           
-            
-            cout<<"El numero de asiento es: "<< NumAsiento <<endl;
         }
+        
+        
+    }
     
-    system("pause");
 
     
     return 0;
