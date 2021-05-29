@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 
-    const int tamanio=5;
+    const int tamanio=20;
     int AutoBus[tamanio], NumAsiento, contador;
     char resp='s';
 
@@ -22,11 +22,13 @@ int main(){
         {
             if (AutoBus[z]==0)
             {
-                cout<<"\""<<z+1<<"\" "<<endl;
+                cout<<"\"["<<z+1<<"\"]";
+                //cout<<""<<endl;
             }
             
         }
-
+        
+        cout<<""<<endl;
         cout<<" -----Digite un numero de asiento----- "<<endl;
         cin>>NumAsiento;
 
@@ -45,12 +47,12 @@ int main(){
     
         cout<<" *****Informes de boletos vendidos y no comprados*****"<<endl;
 
-        for (size_t y = 0; y < tamanio; y++){
+        for (int y = 0; y < tamanio; y++){
             if (AutoBus[y]==1){
                 cout<<"Asiento #"<< y+1 << "-> vendido" <<endl;
             }else
-            cout<<"Asiento #"<< y+1 << "-> DESOCUPADO" <<endl;
             
+            cout<<"Asiento #"<< y+1 << "-> DESOCUPADO" <<endl;
         }
         
         
