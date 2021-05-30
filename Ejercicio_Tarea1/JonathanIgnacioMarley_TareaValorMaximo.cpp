@@ -11,6 +11,16 @@ int main(){
     for (int x = 0; x < tamanio; x++){
         num[x]=0;
     }
+    
+        for (int j = 0; j < tamanio; j++){
+            cout<<j+1<<" **Ingrese un numero** "<<endl;
+            cin>>num[j];
+             //cout<<"\"["<<j+1<<"\"]";
+
+            if (num[j] > valorMaximo){
+                valorMaximo = num[j];
+            }
+        }
 
         for (int j = 0; j < tamanio; j++){
             cout<<j+1<<" **Ingrese un numero** "<<endl;

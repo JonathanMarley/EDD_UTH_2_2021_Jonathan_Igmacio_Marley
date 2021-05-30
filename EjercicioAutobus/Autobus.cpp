@@ -7,7 +7,7 @@ using namespace std;
 
 int main(){
 
-    const int tamanio=20;
+    const int tamanio=12;
     int AutoBus[tamanio], NumAsiento, contador;
     char resp='s';
 
@@ -16,7 +16,6 @@ int main(){
         AutoBus[x]=0;
     }
     while (resp=='s' && contador<tamanio){
-
         cout<<" ****Asiento vacios**** "<<endl;
         for (int  z = 0; z < tamanio; z++)
         {
@@ -27,6 +26,7 @@ int main(){
             }
             
         }
+       
         
         cout<<""<<endl;
         cout<<" -----Digite un numero de asiento----- "<<endl;
@@ -54,6 +54,8 @@ int main(){
             
             cout<<"Asiento #"<< y+1 << "-> DESOCUPADO" <<endl;
         }
+
+        
         
         
     }
