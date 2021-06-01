@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     const int tamanio=12,porcentaje=12;
-    int  candidato[tamanio],votos[porcentaje], numeroVoto, contador=0, total=0, posicioncandidato, posc;
+    int  candidato[tamanio],votos[porcentaje], numeroVoto, contador=0, total=0, posicioncandidato, posc, max;
     char resp='s';
 
     for (int m = 0; m < tamanio; m++){
@@ -55,11 +55,6 @@ int main(){
     {
         cout<<"--Candidato: " << s+1 << " -> Cantidad de votos: " << candidato[s] <<endl;
         
-       //if (candidato[s]>=numeroVoto){
-            
-            //posicioncandidato = candidato[s];
-            //posicioncandidato = s;
-        //}
        
     }
     //Acumular datos 
@@ -77,28 +72,26 @@ int main(){
      for (int b = 0; b < tamanio; b++)    {
 
          votos[b] =(numeroVoto * 100 /total);
-         cout<<" --Candidato " << b+1 << " : " << candidato[b]<< votos[b] <<" % " <<endl;        
-           if (candidato[b]> numeroVoto) {
-                 numeroVoto = candidato[b];
-                 votos[b] = b;
-            
-             }
+         cout<<" --Candidato " << b+1 << " : " << candidato[b]<< votos[b] <<" % " <<endl;              
+          
         }
-        //PROBLEMA
-         cout<<" ***El porsentaje mas alto es: "<< votos+1 <<endl;
-               
-    
+
         //candidato con mas votos
         for (int n = 0; n < tamanio; n++){
-          if (candidato[n] < contador) {  
+          if (candidato[n] > contador) {  
               contador = candidato[n];
-               posc = n;
+               posc = n;//Encontrar el candidato ganador
          }
-       
-      
+          
      }
+
+     for (int t = 0; t < porcentaje; t++){
+         
+         
+     }
+     
         cout<<"*******************************************************************************************************************"<<endl;
-        cout<<"Candidato "  << posc+1 <<" : " << "fue el mas votado con " << contador << " votos" <<endl;
+        cout<<"Candidato: " << posc+1 << " es el ganador" <<" : " << "fue el mas votado con " << contador << " votos" << " El porcentaje obtenido es: "<< max+1 << " % "<<endl;
         cout<<"Gracias por votar vuelva pronto:"<<endl;
         cout<<"*******************************************************************************************************************"<<endl;
 
