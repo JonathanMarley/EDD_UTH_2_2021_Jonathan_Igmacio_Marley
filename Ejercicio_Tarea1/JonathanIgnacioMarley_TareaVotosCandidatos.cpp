@@ -50,7 +50,7 @@ int main(){
     
      
     cout<<"*************************************************************************"<<endl;
-    cout<<" -----Finalizacion de los votos----- "<<endl;
+    cout<<" -----Resultados  de las votaciones finalizado----- "<<endl;
     for (int s = 0; s < tamanio; s++)
     {
         cout<<"--Candidato: " << s+1 << " -> Cantidad de votos: " << candidato[s] <<endl;
@@ -62,44 +62,47 @@ int main(){
         //}
        
     }
+    //Acumular datos 
+     for (int t = 0; t < tamanio; t++){
+        //cout<<votos[t]<<"\t\t";
+        total+= votos[t];//Tendria la acumulacion de los votos
+        
+    }
     
     
      cout<<"________________________________________________________________________________"<<endl;
      cout<<" ****Resultados de los porcentajes de los candidatos mas votados ****"<<endl;
      
+     //Porcentaje de cada candidato
      for (int b = 0; b < tamanio; b++)    {
 
-         votos[b] =(candidato[b] * 100 /total);
+         votos[b] =(numeroVoto * 100 /total);
          cout<<" --Candidato " << b+1 << " : " << candidato[b]<< votos[b] <<" % " <<endl;        
-        
+           if (candidato[b]> numeroVoto) {
+                 numeroVoto = candidato[b];
+                 votos[b] = b;
+            
+             }
         }
-        //Acumular datos 
-        for (int t = 0; t < tamanio; t++){
-        //cout<<votos[t]<<"\t\t";
-        total+= votos[t];
-        
-    }
+        //PROBLEMA
+         cout<<" ***El porsentaje mas alto es: "<< votos+1 <<endl;
+               
     
         //candidato con mas votos
         for (int n = 0; n < tamanio; n++){
-          if (candidato[n]>votos[n]) {  
-              votos[n] = candidato[n];
+          if (candidato[n] < contador) {  
+              contador = candidato[n];
                posc = n;
          }
+       
       
      }
         cout<<"*******************************************************************************************************************"<<endl;
-        cout<<"Candidato " << candidato[posc] <<" : " << "fue el mas votado con " << votos << " votos" <<endl;
+        cout<<"Candidato "  << posc+1 <<" : " << "fue el mas votado con " << contador << " votos" <<endl;
         cout<<"Gracias por votar vuelva pronto:"<<endl;
         cout<<"*******************************************************************************************************************"<<endl;
-       
-              
-   
-   
-    
 
-
-
+        
     return 0;
 }
 
