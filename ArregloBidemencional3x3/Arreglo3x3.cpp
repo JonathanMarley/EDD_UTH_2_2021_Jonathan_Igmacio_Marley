@@ -12,8 +12,18 @@ int main(){
             cin>>matriz[z][c];
         }
         cout<<""<<endl;
-        
     }
+
+    //Segundo for, para mostrar la matriz
+    cout<<" **** La matriz ingresada ****"<<endl;
+    for (int e = 0; e < 3; e++){
+       for (int q = 0; q < 3; q++){
+           cout<<matriz[e][q]<<endl;
+       }
+       cout<<endl;
+       
+    }
+    
     
     return 0;
 }
