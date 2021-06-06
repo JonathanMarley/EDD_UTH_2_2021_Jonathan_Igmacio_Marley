@@ -23,6 +23,24 @@ int main(){
        cout<<endl;
        
     }
+    cout<<" ***Suma de las matrices"<<endl;
+    //La suma para la matriz
+    for (int g = 0; g < 3; g++){
+        
+        int Sumafila=0;
+        int sumacol=0;
+        for (int p= 0; p < 3; p++){
+            
+            Sumafila=Sumafila+matriz[g][p];
+            sumacol=sumacol+matriz[p][g];
+
+        }
+
+        cout<<" --La suma de la fila "<<g<<" es: "<<Sumafila<<endl;
+        cout<<" --La suma de la fila "<<g<<" es: "<<sumacol<<endl;
+
+    }
+    
     
     
     return 0;
