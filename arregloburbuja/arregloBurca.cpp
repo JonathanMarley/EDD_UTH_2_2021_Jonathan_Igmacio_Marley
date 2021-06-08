@@ -5,31 +5,33 @@ using namespace std;
 int main()
 {
     //const int tamanio=10;
-    int numero[] {2,9,7,5,1,3,6,4,8,10};
-    int auxi, i,j;
+    int bubble[7] = {8,9,4,7,2,6,1};
+    int auxi;
     
 
-    for (int i = 0; i <10; i++)
+    for (int i = 0; i <7; i++)
     {
-        for (int j = 0; j < 10; j++)
+        for (int j = 0; j < 6; j++)
         {
-            if (numero[j] > numero[j+1])
+            if (bubble[j] > bubble[j+1])
             {
-                auxi = numero[j];
-                numero[j] = numero[j+1];
-                numero[j+1] = auxi;
+                auxi = bubble[j];
+                bubble[j] = bubble[j+1];
+                bubble[j+1] = auxi;
             }
             
         }
         
     }
 
-    cout<<" ***Ordenamientos: "<<endl;
-    for (int i = 0; i < 10; i++)
+    cout<<" ***Los elementos ordenados: "<<endl;
+    for (int i = 0; i < 7; i++)
     {
-        cout<<numero[i]<<" ";
+        
+        cout<<bubble[i]<<" "<<endl;
     }
     
-    
+    system("pause");
     return 0;
 }
+//ordenar un arreglo de datos utilizando la funcion sort
