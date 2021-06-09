@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    //ordenar un arreglo de datos utilizando la funcion sor
     //const int tamanio=10;
     int bubble[7] = {8,9,4,7,2,6,1};
     int auxi;
@@ -34,4 +35,3 @@ int main()
     system("pause");
     return 0;
 }
-//ordenar un arreglo de datos utilizando la funcion sort
