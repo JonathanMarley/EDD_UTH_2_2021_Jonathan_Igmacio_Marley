@@ -29,7 +29,7 @@ int main()
         {
             cout<<matriz[c][f];
         }
-        cout<<""<<endl;
+        cout<<" "<<endl;
         
     }
 
@@ -40,7 +40,7 @@ int main()
         {
             cout<<matriz[e][r];
         }
-        cout<<""<<endl;
+        cout<<" "<<endl;
     }
     
     system("pause");
