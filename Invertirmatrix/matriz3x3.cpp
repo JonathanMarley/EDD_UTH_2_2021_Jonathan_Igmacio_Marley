@@ -16,29 +16,32 @@ int main()
     {
        for (int d = 0; d < 3; d++)
        {
-           cout<<"Digite un numero: ["<<i<<"]["<<d<<"]: ";
+           cout<<"Digite un numero: ["<<i<<"]["<<d<<"]: "<<endl;
            cin>>matriz[i][d];
        }
+       cout<<""<<endl;
        
     }
-
-    cout<<"Matriz original:"<<endl;
+    cout<<""<<endl;
+    cout<<"===Matriz original=== "<<endl;
+    cout<<""<<endl;
     for (int c = 0; c < 3; c++)
     {
         for (int f = 0; f < 3; f++)
         {
-            cout<<matriz[c][f];
+            cout<<" | "<<matriz[c][f]<<" | ";
         }
         cout<<" "<<endl;
         
     }
-
-    cout<<"Matriz Inverza:"<<endl;
+    cout<<""<<endl;
+    cout<<"***** Matriz Inverza**** "<<endl;
+    cout<<""<<endl;
     for (int r = 0; r < 3; r++)
     {
         for (int e = 0; e < 3; e++)
         {
-            cout<<matriz[e][r];
+            cout<<" | "<<matriz[e][r]<<" | ";
         }
         cout<<" "<<endl;
     }
