@@ -2,68 +2,65 @@
 
 using namespace std;
 
+// int arreglo[8];
 int main()
 {
-    const int tamanio=8; 
-    int n,h;
-    int arreglo[tamanio],numero, auxi;
-    int suma=0;
-    for (int i = 0; i < tamanio; i++)
-    {
-        arreglo[i]=0;
-    }
+
+    int numero[8], auxi;
+    int suma = 0;
     
-    
-    for (int d = 0; d < tamanio; d++)
+    cout<<"==================================================="<<endl;
+    cout<<"  | PROGRAMA DE ORDENAMIENTO CON METODO BURBUJA |  "<<endl;
+    cout<<"==================================================="<<endl;
+    for (int d = 0; d < 8; d++)
     {
-        cout <<" **Ingrese los numeros** ["<<d<<"]"<<endl;
-        cout<<" ";cin >> arreglo[d];
-        
+        cout << " **Ingrese los numeros** [" << d << "]" << endl;
+        cout << " ";
+        cin >> numero[d];
     }
-    cout<<""<<endl;
+    cout<<"***************************************************"<<endl;
+    cout<<"     | RESULTADOS DE LOS ELEMENTOS INGRESADOS |    "<<endl;
+    cout<<"***************************************************"<<endl;
+    //cout << " *** Los elementos ingresado por teclado fueron en desoren *** " << endl;cout <<""<<endl;
+    for (int z = 0; z < 8; z++)
+    {
+        cout << " | " << z << " | " << " -> " << numero[z] << " | "<<endl;
+    }
+    cout << "" << endl;
+    
+    //metodo burbuja para ordenar los arrglos
     for (int f = 0; f < 8; f++)
+    {
+        for (int c = 0; c < 7; c++)
         {
-            for (int c = 0; c < 7; c++)
+
+            if (numero[c] > numero[c + 1])
             {
-                
-            if (arreglo[c] > arreglo[c+1])
-            {
-                auxi = arreglo[c];
-                arreglo[c] = arreglo[c+1];
-                arreglo[c+1] = auxi;
+                auxi = numero[c];
+                numero[c] = numero[c + 1];
+                numero[c + 1] = auxi;
             }
-            }
-
         }
+    }
+    cout<<"*************************************************"<<endl;
+    cout<<"     | RESULTADOS DE LOS ELEMENTOS ORDENADOS |    "<<endl;
+    cout<<"**************************************************"<<endl;
+    for (int v = 0; v < 8; v++)
+    {
 
+        cout << " | " << v << " | "<< " -> " << numero[v] <<" | "<<endl;
+        //suma+=arreglo[v];
+    }
+    cout <<""<<endl;
 
-        cout<<" ***Los elementos ingresado fueron*** "<<endl;
-        for (int z = 0; z < 8; z++)
-        {
-            cout<<" | "<<arreglo[z]<<" | "<<endl;
-        }
-        cout<<""<<endl;
+    //La suma de los arreglos ordenados 
+    for (int m = 0; m < 8; m++)
+    {
+        suma += numero[m];
+    }
+    cout << " ---La suma de los elementos ingresado en forma de orden es: " << suma << endl;
 
-        cout<<" ***Los elementos ingresado por teclado ordenados*** "<<endl;
-        for (int v = 0; v < 8; v++)
-        {
-            
-            cout<<" | "<<v<<" | "<<" -> " <<arreglo[v]<<endl;
-            //suma+=arreglo[v]; 
-           
-        }
-        
-
-        cout<<" ****La suma de los arreglo ordenados**** "<<endl;
-        for (int m = 0; m < 8; m++)
-        {
-          suma+=arreglo[m]; 
-        }
-        cout<<" ---La suma es: "<<suma<<endl;
-        
-        
-        
-        system("pause");
+    system("pause");
 
     //cout << " ***Los numero ingresados fuero: " << numero << endl;
 
