@@ -9,7 +9,13 @@ int main()
     int numero[8] = {80, 20, 98, 78, 36, 10, 87, 65};
     int suma=0;
 
-    cout << " ======== los elementos original son ======== "<<endl;
+    cout<<"==================================================="<<endl;
+    cout<<"  | PROGRAMA DE ORDENAMIENTO CON LA FUNCION SORT |  "<<endl;
+    cout<<"==================================================="<<endl;
+
+    cout<<"***************************************************"<<endl;
+    cout<<"     | LOS ELEMENTOS EN DESORDEN SON   |           "<<endl;
+    cout<<"***************************************************"<<endl;
     cout << "" << endl;
     for (int i = 0; i < 8; i++)
     {
@@ -19,9 +25,10 @@ int main()
     cout << "" << endl;
 
     sort(numero, numero + 8);
-
-    cout << " ======== Los elementos ordenados del arreglados son ======== " << endl;
-    cout << "" << endl;
+    cout<<"***************************************************"<<endl;
+    cout<<"     | LOS ELEMENTOS ORDENADOS DEL ARREGLO SON: |  "<<endl;
+    cout<<"***************************************************"<<endl;
+    //cout << "" << endl;
     for (int f = 0; f < 8; f++)
     {
         cout <<"->"<< " | " << numero[f] << " | ";
@@ -29,13 +36,16 @@ int main()
     cout <<""<<endl;
     cout <<""<<endl;
     
-    //La suma de los elementos ordenados son;
+    cout<<"*****************************************************************"<<endl;
+    cout<<"     | RESULTADOS DE LA SUMA DE LOS ELEMENTOS ORDENADOS SON |    "<<endl;
+    cout<<"*****************************************************************"<<endl;
     for (int v = 0; v < 8; v++)
     {
         suma+=numero[v];
     }
+    cout<<"=========================================================="<<endl;
     cout<<" --La suma de los elementos de ordenados es: "<<suma<<endl;
-    
+    cout<<"=========================================================="<<endl;
 
     system("pause");
     return 0;
