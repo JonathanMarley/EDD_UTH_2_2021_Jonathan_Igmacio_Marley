@@ -18,9 +18,9 @@ int main()
         cout << " ";
         cin >> numero[d];
     }
-    cout<<"***************************************************"<<endl;
-    cout<<"     | RESULTADOS DE LOS ELEMENTOS INGRESADOS |    "<<endl;
-    cout<<"***************************************************"<<endl;
+    cout<<"************************************************************"<<endl;
+    cout<<"   | LOS NUMEROS INGRESADO POR TECLADO EN DESORDEN |        "<<endl;
+    cout<<"************************************************************"<<endl;
     //cout << " *** Los elementos ingresado por teclado fueron en desoren *** " << endl;cout <<""<<endl;
     for (int z = 0; z < 8; z++)
     {
@@ -53,12 +53,17 @@ int main()
     }
     cout <<""<<endl;
 
+    cout<<"**************************************************************"<<endl;
+    cout<<"     | RESULTADOS DE LA SUMA DE LOS ELEMENTOS ORDENADOS  |    "<<endl;
+    cout<<"**************************************************************"<<endl; 
     //La suma de los arreglos ordenados 
     for (int m = 0; m < 8; m++)
     {
         suma += numero[m];
     }
-    cout << " ---La suma de los elementos ingresado en forma de orden es: " << suma << endl;
+    cout<<"================================================================================="<<endl;
+    cout << " ---La suma de los elementos ingresado en forma de ordenada es: " << suma          <<endl;
+    cout<<"================================================================================="<<endl;
 
     system("pause");
 
