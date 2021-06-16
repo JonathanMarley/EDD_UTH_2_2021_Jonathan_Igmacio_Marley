@@ -1,15 +1,19 @@
-//Convertir la cadena texto "esTRucTura de dATOs" a mayuscula utilizando apuntadores
+//convertir la cadena de texto "EsTruCTuRa De DaTOs a mayuscula usando punteros"
 #include <iostream>
 #include <string.h>
-#include <conio.h>
+
 using namespace std;
 
 int main()
 {
-    char cadena [] = "esTrucTura de  dATOs"; 
-    strupr(cadena);
+    char cadena[] = "EsTrucTuRa De DaTOs";
+    strupr (cadena);
+    cout<<"La palabra correcta es: "<<cadena<<endl;
     char *cadenaPtr;
-    cadenaPtr=&cadena;
-    cout<<"el nombre correcto es"<<*cadenaPtr;
+    cadenaPtr=&cadena[0];
+    cout<<"El puntero es: "<<*cadenaPtr<<endl;
     return 0;
 }
+
+
+

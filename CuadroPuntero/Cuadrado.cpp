@@ -8,7 +8,8 @@ int main()
     int *numPtr;
     numPtr=&num;
     cuadrado = pow(*numPtr,2);
-    cout<<"Cuadrado del numero "<<*numPtr
+    cout<<"Cuadrado del numero "<<*numPtr<< " es "<<cuadrado<<endl;
+    system("pause");
     return 0;
 }
 
